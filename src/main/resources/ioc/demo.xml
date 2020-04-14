@@ -5,8 +5,12 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="student" class="com.fan.sb2.ioc.xml.Student">
+        <constructor-arg index="0" value="yangfan"/>
+        <constructor-arg index="1" value="23"/>
+        <!--
         <property name="name" value="yangfan"/>
         <property name="age" value="23"/>
+        -->
         <property name="classList">
             <list>
                 <value>math</value>
@@ -14,5 +18,25 @@
             </list>
         </property>
     </bean>
+    
+    <bean id="helloService" class="com.fan.sb2.ioc.xml.HelloService">
+        <property name="student" ref="student"/>
+        <property name="animal" ref="cat"/>
+    </bean>
 
+    <bean id="animalFactory" class="com.fan.sb2.ioc.xml.AnimalFactory"/>
+    <bean id="dog" factory-bean="animalFactory" factory-method="getAnimal">
+        <constructor-arg value="dog"/>
+    </bean>
+    <bean id="cat" factory-bean="animalFactory" factory-method="getAnimal">
+        <constructor-arg value="cat"/>
+    </bean>
+    <!--
+    <bean id="dog" class="com.fan.sb2.ioc.xml.AnimalFactory" factory-method="getAnimal">
+        <constructor-arg value="dog"/>
+    </bean>
+    <bean id="cat" class="com.fan.sb2.ioc.xml.AnimalFactory" factory-method="getAnimal">
+        <constructor-arg value="cat"/>
+    </bean>
+    -->
 </beans>
