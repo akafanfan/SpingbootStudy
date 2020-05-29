@@ -18,7 +18,7 @@
             </list>
         </property>
     </bean>
-    
+
     <bean id="helloService" class="com.fan.sb2.ioc.xml.HelloService">
         <property name="student" ref="student"/>
         <property name="animal" ref="cat"/>
@@ -31,6 +31,9 @@
     <bean id="cat" factory-bean="animalFactory" factory-method="getAnimal">
         <constructor-arg value="cat"/>
     </bean>
+
+
+
     <!--
     <bean id="dog" class="com.fan.sb2.ioc.xml.AnimalFactory" factory-method="getAnimal">
         <constructor-arg value="dog"/>
