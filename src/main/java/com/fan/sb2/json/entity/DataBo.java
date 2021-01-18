@@ -1,4 +1,4 @@
-package com.fan.practice.json.entity;
+package com.fan.sb2.json.entity;
 
 import lombok.Data;
 

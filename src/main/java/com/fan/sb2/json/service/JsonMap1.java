@@ -1,8 +1,8 @@
-package com.fan.practice.json.service;
+package com.fan.sb2.json.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fan.practice.json.entity.DataBo;
+import com.fan.sb2.json.entity.DataBo;
 
 import java.util.HashMap;
 import java.util.Iterator;
